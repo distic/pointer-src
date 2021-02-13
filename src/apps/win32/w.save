@@ -1,0 +1,45 @@
+//////////////////////////////////////////////////////
+//
+// Copyright (c) 2019 Ahmad N. Chatila
+//
+// PowerTip - Codename BlessRemote
+//
+// --------------------------------------------------
+// MAIN.CPP
+//
+// Jan 24, 2020 @ 4:32 AM
+//
+
+#define WIN32_LEAN_AND_MEAN
+#include <Windows.h>
+#include <gfx/3d/cuda.h>
+#include <lazy.h>
+#include <rect.h>
+#include <libwin32.h>
+#include <mingw32.h>
+#include <mingw64.h>
+
+#define __SYS_BUF	2048
+#define __SYS_EAX	0xEEA383F
+#define __SYS_ESP	0xEEA88CD
+#define TRUE		1
+#define FALSE		0
+#define __KILL_PROG(SIG) \
+	m_kill->bringDown(SIG, -1, &SIG)
+
+#define HORZ_COUNT	800
+#define VERT_COUNT	600
+
+#define MOCK_DPI	96
+
+__declspec(dllexport)
+DWORD MainProg(int argc, char ** argv)
+{
+    STARTUPINFO si;
+    BOOL hSucc = Verify(&si);
+    
+    if (hSucc == FALSE) {
+	goto WTF;
+    }
+}
+		
